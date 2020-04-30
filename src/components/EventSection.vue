@@ -33,14 +33,17 @@
                     >
                 </template>
                 <div class="navigator">
-                    <a href="#" role="button" class="carousel-control-prev">
+                    <a href="#" aria-label="prev" role="button" class="carousel-control-prev">
                         <span class="carousel-control-prev-icon"></span>
                         <span class="sr-only">Previous Slide</span>
                     </a>
-                    <div class="content">
 
+                    <div class="content">
+                        <h1>AAA</h1>
+                        <p>AAAbbbcccddd</p>
                     </div>
-                    <a href="#" role="button" class="carousel-control-next">
+
+                    <a href="#" aria-label="next" role="button" class="carousel-control-next">
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next Slide</span>
                     </a >
@@ -59,6 +62,14 @@
         components: {
             BCarousel,
             BCarouselSlide
+        },
+        methods: {
+            prev() {
+                this.$refs.SlideShow.prev()
+            },
+            next() {
+                this.$refs.SlideShow.next()
+            }
         }
     }
 </script>
@@ -79,9 +90,19 @@
         transform: translate(0%, -10%);
     }
 
-    .navigator a{
-        background-color: rgba(85,85,85,1);
+    .navigator a {
+        background-color: rgba(85, 85, 85, 1);
         width: 10%;
+    }
+
+    img{
+        object-fit: cover;
+        max-height: 720px;
+    }
+
+    .content{
+        margin: 15%;
+        text-align: left;
     }
 
 </style>
