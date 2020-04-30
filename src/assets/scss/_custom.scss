@@ -1,0 +1,31 @@
+:root{
+  --text_white:#ffffff;
+  --text_gray:#BBBBBB;
+  --text_red:#DD163B;
+  --text_green:#6DB33F;
+  --bg_dark:#262A2D;
+  --bg_medium:#3D3D3D;
+  --bg_light:#7D7D7D;
+}
+
+$text_white:#ffffff;
+$text-gray:#BBBBBB;
+$text-red:#DD163B;
+$text_green:#6DB33F;
+$bg-dark:#262A2D;
+$bg-medium:#3D3D3D;
+$bg-light:#7D7D7D;
+
+$theme-colors: (
+  "text_white": #ffffff,
+  "text_gray": #BBBBBB,
+  "text_red": #DD163B ,
+  "text_green":#6DB33F,
+  "bg_dark": #262A2D,
+  "bg_medium": #3D3D3D,
+  "bg_light": #7D7D7D
+);
+
+@import "~bootstrap/scss/bootstrap.scss";
+@import '~bootstrap-vue/dist/bootstrap-vue.css';
+
