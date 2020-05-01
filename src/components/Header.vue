@@ -22,8 +22,6 @@
           </a>
         </div>
 
-      <EventSection></EventSection>
-
     </b-navbar>
   </div>
 </template>
@@ -49,6 +47,14 @@ export default {
 h1 {
   font-size: 2em;
   margin: 0.2em 0.5em;
+}
+
+#logo{
+    z-index: 10;
+}
+
+#EventSection{
+    z-index: -10;
 }
 
 #bars div{
