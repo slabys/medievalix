@@ -1,6 +1,7 @@
 <template>
     <div>
         <b-carousel
+                ref="SlideShow"
                 id="SlideShow"
                 :interval="4000"
                 indicators
@@ -33,7 +34,7 @@
                     >
                 </template>
                 <div class="navigator">
-                    <a href="#" aria-label="prev" role="button" class="carousel-control-prev">
+                    <a href="#" role="button" class="carousel-control-prev" @click="$refs.SlideShow.prev()">
                         <span class="carousel-control-prev-icon"></span>
                         <span class="sr-only">Previous Slide</span>
                     </a>
@@ -43,13 +44,13 @@
                         <p>AAAbbbcccddd</p>
                     </div>
 
-                    <a href="#" aria-label="next" role="button" class="carousel-control-next">
+                    <a href="#" role="button" class="carousel-control-next" @click="$refs.SlideShow.next()">
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next Slide</span>
                     </a >
                 </div>
-            </b-carousel-slide>
 
+            </b-carousel-slide>
         </b-carousel>
     </div>
 </template>
@@ -63,14 +64,6 @@
             BCarousel,
             BCarouselSlide
         },
-        methods: {
-            prev() {
-                this.$refs.SlideShow.prev()
-            },
-            next() {
-                this.$refs.SlideShow.next()
-            }
-        }
     }
 </script>
 
@@ -103,6 +96,15 @@
     .content{
         margin: 15%;
         text-align: left;
+    }
+
+    .navigator {
+        opacity: 0;
+        transition: 1s;
+    }
+
+    .slide:hover .navigator{
+        opacity: 1;
     }
 
 </style>
